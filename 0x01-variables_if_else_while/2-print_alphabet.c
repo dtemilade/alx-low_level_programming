@@ -7,5 +7,14 @@
  */
 int main(void)
 {
-return (0);
+	char low_alph[26] = "abcdefghijklmnopqrstuvwxyz";
+	int list = 0;
+	while (list < 26)
+
+	{
+		putchar(low_alph[list]);
+		list++;
+	}
+	putchar('\n');
+	return (0);
 }
