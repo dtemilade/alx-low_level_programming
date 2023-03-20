@@ -7,5 +7,16 @@
  */
 int main(void)
 {
-return (0);
+	char hex_dec[16] = "0123456789abcdef";
+	int list = 0;
+
+	while (list < 16)
+
+	{
+		putchar(hex_dec[list]);
+		list++;
+	}
+
+	putchar('\n');
+	return (0);
 }
