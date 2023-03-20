@@ -7,17 +7,20 @@
  */
 int main(void)
 {
-	int num_list;
+int num_list = 48;
 
-	for (num_list = 48; num_list < 58; num_list++)
+	while (num_list < 58)
+
+	{
 		putchar(num_list);
+		num_list++;
 		if (num_list != 57)
 		{
 			putchar(',');
 			putchar(' ');
 		}
 	}
-
 	putchar('\n');
 	return (0);
 }
+
