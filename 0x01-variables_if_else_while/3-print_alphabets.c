@@ -7,5 +7,15 @@
  */
 int main(void)
 {
-return (0);
+	char f_alph[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	int list = 0;
+
+	while (list < 52)
+
+	{
+		putchar(f_alph[list]);
+		list++;
+	}
+	putchar('\n');
+	return (0);
 }

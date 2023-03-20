@@ -9,6 +9,7 @@ int main(void)
 {
 	char low_alph[26] = "abcdefghijklmnopqrstuvwxyz";
 	int list = 0;
+
 	while (list < 26)
 
 	{

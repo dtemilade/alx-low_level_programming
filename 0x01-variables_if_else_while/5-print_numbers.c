@@ -7,5 +7,15 @@
  */
 int main(void)
 {
-return (0);
+	int disp_num = 0;
+
+	while (disp_num < 10)
+
+	{
+		printf("%d", disp_num);
+		disp_num++;
+	}
+
+	printf("\n");
+	return (0);
 }

@@ -7,5 +7,16 @@
  */
 int main(void)
 {
-return (0);
+	char ommit_eq[24] = "abcdfghijklmnoprstuvwxyz";
+	int list = 0;
+
+	while (list < 24)
+
+	{
+		putchar(ommit_eq[list]);
+		list++;
+	}
+
+	putchar('\n');
+	return (0);
 }
