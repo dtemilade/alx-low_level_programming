@@ -20,8 +20,8 @@ int main(void)
 			if (f_digit < s_digit)
 
 			{
-				putchar(s_digit);
 				putchar(f_digit);
+				putchar(s_digit);
 
 				if (s_digit != 56 || f_digit != 57)
 
