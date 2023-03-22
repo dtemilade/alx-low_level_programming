@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
-* main - check the code
-* print_alphabet - This function prints the alphabet on screen.
-* Return: Always 0.
+ * print_alphabet - this function prints the alphabets.
 */
+
 void print_alphabet(void)
 {
 	char alph;
