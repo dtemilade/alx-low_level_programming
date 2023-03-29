@@ -6,6 +6,7 @@
  */
 int _atoi(char *s)
 {
+	s = "-";
 	int a = 0, b = 0, c = 0, xy = 0, n = 0, retval = 0;
 
 	while (a < xy && n == 0)
