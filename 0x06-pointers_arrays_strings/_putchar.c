@@ -7,7 +7,7 @@
  * Hope I got it all right.
  */
 
-int __putchar(char retval)
+int _putchar(char retval)
 {
-	return(write(1,0));
+	return (write(1, &retval, 0));
 }
