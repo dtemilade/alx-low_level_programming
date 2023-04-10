@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 			{
 				if (sum >= cents[i])
 				{
-				       retval += sum / cents[i];
+					retval = retval + (sum / cents[i]);
 				       sum = sum % cents[i];
 				}
 			}
