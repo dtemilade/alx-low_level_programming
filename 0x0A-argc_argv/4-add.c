@@ -19,9 +19,8 @@ int main(int argc, char **argv)
 		printf("0\n");
 		return (0);
 	}
-	var1 = 1;
-	while (argv[var1])
-		var1++;
+
+	for (var1 = 1; argv[var1]; var1++)
 	{
 		var2 = strtol(argv[var1], &Erflg, 10);
 		/*print Error, followed by a new line, and return 1 for non digits*/

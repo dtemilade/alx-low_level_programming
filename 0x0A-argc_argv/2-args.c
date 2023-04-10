@@ -8,12 +8,10 @@
 */
 int main(int argc, char **argv)
 {
-	int x = 0;
+	int x;
 
-	while (x < argc)
-		x++;
-	printf("%s\n", argv[x]);
-
+	for (x = 0; x < argc; x++)
+		printf("%s\n", argv[x]);
 	return (0);
 }
 
