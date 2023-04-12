@@ -17,13 +17,13 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	k = k + ac;
-	str = malloc(sizeof(char) * k + 1);
 	for (x = 0; x < ac; x++)
 	{
 		for (y = 0; av[x][y]; y++)
 			k++;
 	}
+	k = k + ac;
+	str = malloc(sizeof(char) * k + 1);
 
 	/*New strin fails, return NULL*/
 	if (str == NULL)
@@ -31,14 +31,14 @@ char *argstostr(int ac, char **av)
 
 	for (x = 0; x < ac; x++)
 	{
-		if (str[z] == '\0')
-		{
-			str[z++] = '\n';
-		}
 		for (y = 0; av[x][y]; y++)
 		{
 			str[z] = av[x][y];
 			z++;
+		}
+		if (str[z] == '\0')
+		{
+			str[z++] = '\n';
 		}
 	}
 	return (str);
