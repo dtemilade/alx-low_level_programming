@@ -12,19 +12,18 @@ int *array_range(int min, int max)
 	int x, size;
 	int *var_ptr;
 
-	var_ptr = malloc(sizeof(int) * size);
-
 	/*If min > max, return NULL*/
 	if (min > max)
 		return (NULL);
 
-	/*If malloc fails, return NULL*/
-	if (var_ptr == NULL)
-		return (NULL);
-
 	/*array_range process*/
 	size = max - min + 1;
+	var_ptr = malloc(sizeof(int) * size);
 	for (x = 0; min <= max; x++)
 		var_ptr[x] = min++;
 	return (var_ptr);
+
+	/*If malloc fails, return NULL*/
+	if (var_ptr == NULL)
+		return (NULL);
 }

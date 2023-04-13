@@ -9,10 +9,10 @@
  * Return: a pointer which shall point to a newly allocated space in memory
  */
 
-char string_nconcat(char s1, char s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	/*introducing pointers*/
-	char k;
+	char *k;
 	unsigned int x = 0, y = 0, var_a = 0, var_b = 0;
 
 	/*introducing conditional statement*/

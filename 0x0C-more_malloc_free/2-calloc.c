@@ -7,7 +7,7 @@
  * @l: parameter for number of times
  * Return: a pointer to the memory area
  */
-char *_alomem(char k, char c, unsigned int l)
+char *_alomem(char *k, char c, unsigned int l)
 {
 	/*initialize variables*/
 	unsigned int x;
@@ -27,19 +27,19 @@ char *_alomem(char k, char c, unsigned int l)
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *ptr;
+	char *var_ptr;
 
 	/*_calloc returns NULL If nmemb or size is 0*/
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
 	/*_calloc returns NULL If malloc fails*/
-	ptr = malloc(size * nmemb);
-	if (ptr == NULL)
+	var_ptr = malloc(size * nmemb);
+	if (var_ptr == NULL)
 		return (NULL);
 
 	/*process to returns a pointer to the allocated memory.*/
-	_alomem(ptr, 0, nmemb * size);
-	return (ptr);
+	_alomem(var_ptr, 0, nmemb * size);
+	return (var_ptr);
 }
 
