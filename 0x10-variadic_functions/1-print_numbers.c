@@ -16,9 +16,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(ret_val, n);
 
-	/*initializing the variable x*/
-	x = 0;
-	while (x < n)
+	/*conditional statement for  variable x*/
+	for (x = 0; x < n; x++)
 	{
 		/*processing the output and condition for separator*/
 		printf("%d", va_arg(ret_val, int));

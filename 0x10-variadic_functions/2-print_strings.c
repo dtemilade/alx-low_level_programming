@@ -17,12 +17,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_start(ret_val, n);
 
-	/*initializing the variable x*/
-	x = 0;
-
 	/*conditional statements*/
-	while (x < n)
-		x++;
+	for (x = 0; x < n; x++)
 	{
 		str = va_arg(ret_val, char *);
 		if (str == NULL)

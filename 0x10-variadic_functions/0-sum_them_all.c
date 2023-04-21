@@ -16,13 +16,10 @@ int sum_them_all(const unsigned int n, ...)
 	va_start(i, n);
 	/*initalizing the variables*/
 	ret_val = 0;
-	x = 0;
 
 	/*conditional statement as per number of parameters given*/
-	while (x < n)
-		x++;
-
-	ret_val = ret_val + va_arg(i, int);
+	for (x = 0; x < n; x++)
+		ret_val = ret_val + va_arg(i, int);
 	va_end(i);
 	return (ret_val);
 }
