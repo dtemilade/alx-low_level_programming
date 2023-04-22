@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 	for (a = 0; a < b; a++)
 	{
 		/*using b minus 1 to compare a*/
-		if (a == b – 1)
+		if (a == b - 1)
 		{
 			/*stop the loop and put new line when the if condition meets*/
 			printf("%02hhx\n", var_ptr[a]);
