@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	int a, b;
 
 	/*incorrect argument print Error, then new line and 1 for exit status*/
-	if (argc < 2 || argc > 2)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
