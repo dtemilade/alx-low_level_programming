@@ -21,7 +21,8 @@ list_t *add_node(list_t **head, const char *str)
 	l = 0;
 
 	/*conditional statement for the function*/
-	for (; str[l]; l++)
+	while (str[l])
+		l++;
 
 	retval = malloc(sizeof(list_t));
 	if (!retval)

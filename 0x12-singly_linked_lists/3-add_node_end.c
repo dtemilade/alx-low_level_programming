@@ -18,9 +18,12 @@ list_t *add_node_end(list_t **head, const char *str)
 	unsigned int len;
 	list_t *temp = *head;
 
+	/*Initializing the variable*/
+	len = 0;
 
 	/*conditional statement for the function*/
-	for (len = 0; str[len]; len++)
+	while (str[len])
+		len++;
 
 	new = malloc(sizeof(list_t));
 
