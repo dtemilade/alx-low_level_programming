@@ -18,11 +18,10 @@ list_t *add_node(list_t **head, const char *str)
 	list_t *retval;
 
 	/*initializing variable parameter*/
-	l = 0;
 
 	/*conditional statement for the function*/
-	while (str[l])
-		l++;
+	for (l = 0; str[l]; l++)
+
 	retval = malloc(sizeof(list_t));
 	if (!retval)
 		return (NULL);
