@@ -27,7 +27,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (!retval)
 		return (NULL);
 	retval->str = strdup(str);
-	retval->l = l;
+	retval->len = l;
 	retval->next = (*head);
 	(*head) = retval;
 	return (*head);
