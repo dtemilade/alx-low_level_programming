@@ -16,24 +16,24 @@ size_t free_listint_safe(listint_t **h)
 	len = 0;
 
 	/*conditional statement for the function*/
-	if (!h || !*h)
+	if (!*h || !h)
 		return (0);
 	while (*h)
 	{
 		diff = *h - (*h)->next;
-		if (diff < 0)
-		{
-			free(*h);
-			*h = NULL;
-			len++;
-			break;
-		}
-		else
+		if (diff > 0)
 		{
 			index = (*h)->next;
 			free(*h);
+			*h = NULL;
+			len++;
+		}
+		else
+		{
+			free(*h);
 			*h = index;
 			len++;
+			break;
 		}
 	}
 	*h = NULL;
