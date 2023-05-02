@@ -16,7 +16,7 @@ size_t free_listint_safe(listint_t **h)
 	len = 0;
 
 	/*conditional statement for the function*/
-	if (!*h || !h)
+	if (!h || !*h)
 		return (0);
 	while (*h)
 	{
