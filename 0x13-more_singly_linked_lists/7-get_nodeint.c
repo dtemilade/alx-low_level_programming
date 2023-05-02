@@ -17,7 +17,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	x = 0;
 
 	/*conditional statement for the function*/
-	while (index > (retval && x))
+	while (retval && x < index)
 	{
 		retval = retval->next;
 		x++;
