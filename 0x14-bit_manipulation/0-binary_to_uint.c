@@ -23,6 +23,6 @@ if (b[i] > '1' || b[i] < '0')
 return (0);
 retval = (b[i] - '0') + (2 * retval);
 }
-return (dec_val);
+return (retval);
 }
 
