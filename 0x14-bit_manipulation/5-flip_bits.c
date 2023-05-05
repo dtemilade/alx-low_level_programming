@@ -18,9 +18,10 @@ retval = 0;
 
 for (x = 63; x >= 0; x--)
 {
-val_a = exclusxve >> x;
+val_a = exclusive >> x;
 if (val_a & 1)
 retval++;
 }
 return (retval);
-i}
+
+}
