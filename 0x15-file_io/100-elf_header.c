@@ -87,6 +87,7 @@ break;
 case ELFCLASS64:
 printf("ELF64\n");
 break;
+/*for default value*/
 default:
 printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 }
@@ -107,12 +108,13 @@ switch (e_ident[EI_DATA])
 case ELFDATANONE:
 printf("none\n");
 break;
-case ELFDATA2MSB:
-printf("2's complement, big endian\n");
-break;
 case ELFDATA2LSB:
 printf("2's complement, little endian\n");
 break;
+case ELFDATA2MSB:
+printf("2's complement, big endian\n");
+break;
+/*for default value*/
 default:
 printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 }
@@ -152,35 +154,36 @@ printf(" OS/ABI:");
 switch (e_ident[EI_OSABI])
 {
 case ELFOSABI_NONE:
-printf("UNIX - function that System V\n");
-break;
-case ELFOSABI_TRU64:
-printf("UNIX - function that TRU64\n");
+printf("UNIX - System V\n");
 break;
 case ELFOSABI_HPUX:
-printf("UNIX - function that HP-UX\n");
-break;
-case ELFOSABI_FREEBSD:
-printf("UNIX - function that FreeBSD\n");
+printf("UNIX - HP-UX\n");
 break;
 case ELFOSABI_NETBSD:
-printf("UNIX - function that NetBSD\n");
+printf("UNIX - NetBSD\n");
+break;
+case ELFOSABI_LINUX:
+printf("UNIX - Linux\n");
+break;
+case ELFOSABI_SOLARIS:
+printf("UNIX - Solaris\n");
+break;
+case ELFOSABI_IRIX:
+printf("UNIX - IRIX\n");
+break;
+case ELFOSABI_FREEBSD:
+printf("UNIX - FreeBSD\n");
+break;
+case ELFOSABI_TRU64:
+printf("UNIX - TRU64\n");
 break;
 case ELFOSABI_ARM:
 printf("ARM\n");
 break;
-case ELFOSABI_LINUX:
-printf("UNIX - function that Linux\n");
-break;
-case ELFOSABI_IRIX:
-printf("UNIX - function that IRIX\n");
-break;
 case ELFOSABI_STANDALONE:
 printf("Standalone App\n");
 break;
-case ELFOSABI_SOLARIS:
-printf("UNIX - function that Solaris\n");
-break;
+/*for default value*/
 default:
 printf("<unknown: %x>\n", e_ident[EI_OSABI]);
 }
@@ -214,18 +217,19 @@ switch (e_type)
 case ET_NONE:
 printf("NONE (None)\n");
 break;
+case ET_REL:
+	printf("REL (Relocatable file)\n");
+	break;
 case ET_EXEC:
 printf("EXEC (Executable file)\n");
-break;
-case ET_CORE:
-printf("CORE (Core file)\n");
 break;
 case ET_DYN:
 printf("DYN (Shared object file)\n");
 break;
-case ET_REL:
-printf("REL (Relocatable file)\n");
+case ET_CORE:
+printf("CORE (Core file)\n");
 break;
+/*for default value*/
 default:
 printf("<unknown: %x>\n", e_type);
 }
