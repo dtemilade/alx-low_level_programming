@@ -13,6 +13,7 @@ char *create_buffer(char *file)
 {
 char *var_b;
 
+/*conditional statement for the buffer function*/
 var_b = malloc(sizeof(char) * 1024);
 
 if (var_b == NULL)
@@ -31,10 +32,12 @@ return (var_b);
  */
 void close_file(int a)
 {
-int x;
+	/*introducing variable parameter*/
+	int x;
 
 x = close(a);
 
+/*conditional statement for the function*/
 if (x == -1)
 {
 dprintf(STDERR_FILENO,

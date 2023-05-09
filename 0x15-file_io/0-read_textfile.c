@@ -7,14 +7,17 @@
  * @letters: the number of letters the function should read and print.
  * Return: 0 when function fails or fisame is NULL.
  */
+
 ssize_t read_textfile(const char *fisame, size_t letters)
 {
-ssize_t b;
-char *var_b;
-ssize_t c;
-ssize_t a;
+/*introducing variable parameter*/
+	ssize_t b;
+	char *var_b;
+	ssize_t c;
+	ssize_t a;
 
 a = open(fisame, O_RDONLY);
+/*conditional statement for the function*/
 if (a == -1)
 return (0);
 var_b = malloc(sizeof(char) * letters);

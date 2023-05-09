@@ -8,10 +8,11 @@
  */
 int append_text_to_file(const char *fisame, char *text_content)
 {
-int a, s, b;
+	/*introducing variable parameter*/
+	int a, s, b;
 
 s = 0;
-
+/*conditional statement for the function*/
 if (fisame == NULL)
 return (-1);
 
