@@ -50,15 +50,15 @@ exit(100);
  * main - C program that copies the contents of a file to another file.
  * @argc: The number of arguments supplied to the program.
  * @argv: An array of pointers to the arguments.
-* Return: 0 on success.
-* Description: If the argument count is incorrect, exit code 97.
+ * Return: 0 on success.
+ * Description: If the argument count is incorrect, exit code 97.
  * If file_from does not exist or cannot be read, exit code 98.
  * If file_to cannot be created or written to - exit code 99.
  * If file_to or file_from cannot be closed - exit code 100.
  */
 int main(int argc, char *argv[])
 {
-int s, d, b, c;
+int s, d, b, t;
 char *var_b;
 
 if (argc != 3)
@@ -82,8 +82,8 @@ free(var_b);
 exit(98);
 }
 
-c = write(d, var_b, b);
-if (c == -1 || d == -1)
+t = write(d, var_b, b);
+if (t == -1 || d == -1)
 {
 dprintf(STDERR_FILENO,
 "Error: Can't write to %s\n", argv[2]);
