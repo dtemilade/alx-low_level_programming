@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 
 	/*introducing parameter variable for the function*/
-	char *alpvar = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
+	char *a = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
 	unsigned int s, t;
 	char retval[7] = "      ";
 	size_t var_s, var_i;
@@ -24,26 +24,26 @@ int main(int argc, char *argv[])
 	}
 
 	var_s = strlen(argv[1]);
-	retval[0] = alpvar[(var_s ^ 59) & 63];
+	retval[0] = a[(var_s ^ 59) & 63];
 	for (t = 0, var_i = 0; t < var_s; t++)
 		var_i = var_i + argv[1][t];
-	retval[1] = alpvar[(var_i ^ 79) & 63];
+	retval[1] = a[(var_i ^ 79) & 63];
 	for (t = 0, s = 1; t < var_s; t++)
 		s *= argv[1][t];
-	retval[2] = alpvar[(s ^ 85) & 63];
+	retval[2] = a[(s ^ 85) & 63];
 
 	for (s = argv[1][0], t = 0; t < var_s; t++)
 		if ((char)s <= argv[1][t])
 			s = argv[1][t];
 
 	srand(s ^ 14);
-	retval[3] = alpvar[rand() & 63];
+	retval[3] = a[rand() & 63];
 	for (s = 0, t = 0; t < var_s; t++)
 		s += argv[1][t] * argv[1][t];
-	retval[4] = alpvar[(s ^ 239) & 63];
+	retval[4] = a[(s ^ 239) & 63];
 	for (s = 0, t = 0; (char)t < argv[1][0]; t++)
 		s = rand();
-	retval[5] = alpvar[(s ^ 229) & 63];
+	retval[5] = a[(s ^ 229) & 63];
 	printf("%s\n", retval);
 	return (0);
 }

@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * delete_dnodeint_at_index - prototype fns that deletes a node at a specific index
+ * delete_dnodeint_at_index - fns that deletes a node at a specific index
  * @head: variable parameter double pointer to the linked list
  * @index: variable parameter index at which to delete node
 * Return: Always 1 on success, -1 on failure
