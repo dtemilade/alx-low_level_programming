@@ -1,36 +1,28 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
  * add_dnodeint - function that adds a node to the start of the list
- * @head: parameter of pointer 
- * @n: parameter for node index used by history
- *
- * Return: size of list
+ * @head: variable parameter double pointer to the beginning of the linked list
+ * @n: variable parameter value to add to the new node
+ * Return: the address of the new element, or NULL if it failed
  */
-
-dlistint_t *add_dnodeint(dlistint_t **head, const int n);
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-list_t *new;
+/*introducing parameters*/
+dlistint_t *new;
 
 /*introducing conditional statement*/
 if (!head)
 return (NULL);
-new = malloc(sizeof(list_t));
+new = malloc(sizeof(dlistint_t));
 if (!new)
 return (NULL);
-_memset((void *)new, 0, sizeof(list_t));
 new->n = n;
-if (str)
-{
-new->str = _strdup(str);
-if (!new->str)
-{
-free(new);
-return (NULL);
-}
-}
+new->prev = NULL;
 new->next = *head;
 *head = new;
+if (new->next != NULL)
+(new->next)->prev = new;
 return (new);
 }
-
