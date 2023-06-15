@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * print_dlistint - prototype fns that print all the elements of a dlistint_t list
+ * print_dlistint - fns that print all the elements of a dlistint_t list
  * @h: variable parameter pointer to the start of the linked list
  * Return: number of nodes
  */
@@ -18,4 +18,3 @@ h = h->next;
 }
 return (t);
 }
-
