@@ -1,0 +1,12 @@
+# makefile with variables
+
+# rule
+all: school
+
+# declaration of variables
+cc = gcc
+src = main.c
+
+# compilation
+school: $(src)
+	$(cc) $(src) school.c -o school
