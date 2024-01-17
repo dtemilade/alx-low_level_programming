@@ -12,7 +12,7 @@
  */
 int _search_expon(int *array, size_t left, size_t right, int value)
 {
-	size_t retval;
+	size_t t;
 
 	/*if array is NULL*/
 	if (array == NULL)
@@ -21,17 +21,17 @@ int _search_expon(int *array, size_t left, size_t right, int value)
 	while (right >= left)
 	{
 		printf("Searching in array: ");
-		for (retval = left; retval < right; retval++)
-			printf("%d, ", array[retval]);
-		printf("%d\n", array[retval]);
+		for (t = left; t < right; t++)
+			printf("%d, ", array[t]);
+		printf("%d\n", array[t]);
 
-		retval = left + (right - left) / 2;
-		if (array[retval] == value)
-			return (retval);
-		if (array[retval] > value)
-			right = retval - 1;
+		t = left + (right - left) / 2;
+		if (array[t] == value)
+			return (t);
+		if (array[t] > value)
+			right = t - 1;
 		else
-			left = retval + 1;
+			left = t + 1;
 	}
 	/*value is not present in array*/
 	return (-1);
@@ -50,21 +50,21 @@ int _search_expon(int *array, size_t left, size_t right, int value)
 
 int exponential_search(int *array, size_t size, int value)
 {
-	size_t retval, right;
+	size_t right, t;
 
 	/*if array is NULL*/
 	if (array == NULL)
 		return (-1);
-	
-	retval = 0;
-	
+
+	t = 0;
+
 	if (array[0] != value)
 	{
-		for (retval = 1; retval < size && array[retval] <= value; retval = retval * 2)
-			printf("Value checked array[%ld] = [%d]\n", retval, array[retval]);
+		for (t = 1; t < size && array[t] <= value; t = t * 2)
+			printf("Value checked array[%ld] = [%d]\n", t, array[t]);
 	}
 
-	right = retval < size ? retval : size - 1;
-	printf("Value found between indexes [%ld] and [%ld]\n", retval / 2, right);
-	return (_search_expon(array, retval / 2, right, value));
+	right = t < size ? t : size - 1;
+	printf("Value found between indexes [%ld] and [%ld]\n", t / 2, right);
+	return (_search_expon(array, t / 2, right, value));
 }
